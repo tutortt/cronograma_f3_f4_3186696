@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cronograma Híbrido · Ejecución y Evaluación · Ficha 3186696 · SENA</title>
+  <title>Cronograma Híbrido · Ejecución y Evaluación · Ficha 3186697 · SENA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -176,6 +176,575 @@
       font-size: 14.5px;
       color: #fff;
       letter-spacing: 1px;
+    }
+
+    /* ══ TABS PRINCIPALES ═════════════════════════════ */
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #162238;
+      padding: 0 32px;
+      border-bottom: 2px solid var(--v2);
+      flex-wrap: wrap;
+    }
+
+    .nav-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: transparent;
+      color: rgba(255, 255, 255, .72);
+      border: none;
+      border-bottom: 3px solid transparent;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .nav-tab i {
+      font-size: 13px;
+      color: var(--v3);
+    }
+
+    .nav-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .nav-tab.active {
+      color: #fff;
+      background: rgba(90, 143, 60, .22);
+      border-bottom-color: var(--v3);
+    }
+
+    .nav-tab .tab-badge {
+      background: var(--v2);
+      color: #fff;
+      font-size: 10px;
+      padding: 1px 7px;
+      border-radius: 10px;
+      letter-spacing: .5px;
+    }
+
+    /* ══ PESTAÑA SESIONES Y TEMAS ═════════════════════ */
+    .ses-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, var(--v1) 100%);
+      border-radius: 12px;
+      padding: 18px 24px;
+      color: #fff;
+      margin-bottom: 18px;
+      box-shadow: var(--sombra);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .ses-banner-info h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .ses-banner-info h2 span {
+      color: #ffd54f;
+    }
+
+    .ses-banner-info p {
+      font-size: 12.5px;
+      color: #d4f0a0;
+      font-style: italic;
+      margin-top: 3px;
+    }
+
+    .ses-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .view-switch {
+      display: inline-flex;
+      background: rgba(0, 0, 0, .25);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .view-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, .75);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all .18s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .view-btn.active {
+      background: var(--v2);
+      color: #fff;
+    }
+
+    .toggle-cod-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1.5px solid rgba(255, 255, 255, .35);
+      background: rgba(255, 255, 255, .12);
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .toggle-cod-btn.active {
+      background: #ffd54f;
+      color: var(--navy);
+      border-color: #ffd54f;
+    }
+
+    .toggle-cod-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Tarjetas de Competencias */
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .comp-card {
+      background: var(--blanco);
+      border: 1px solid var(--v-bdr);
+      border-left: 4px solid var(--v2);
+      border-radius: 10px;
+      padding: 11px 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    }
+
+    .comp-card:nth-child(2) {
+      border-left-color: #1976d2;
+    }
+
+    .comp-card:nth-child(3) {
+      border-left-color: #7b1fa2;
+    }
+
+    .comp-card-hdr {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .5px;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .comp-card-hdr i {
+      color: var(--v2);
+    }
+
+    .comp-card p {
+      font-size: 11px;
+      color: #4a5a5a;
+      line-height: 1.35;
+    }
+
+    /* Bloques de Fase en Sesiones */
+    .ses-fase-block {
+      background: var(--blanco);
+      border-radius: 12px;
+      border: 1px solid var(--v-bdr);
+      box-shadow: var(--sombra);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .ses-fase-hdr {
+      padding: 11px 18px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .ses-fase-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hito-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .18);
+      border: 1px solid rgba(255, 255, 255, .35);
+      padding: 3px 11px;
+      border-radius: 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .6px;
+    }
+
+    .ses-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 16px;
+      padding: 16px;
+      background: #f9fcf7;
+    }
+
+    .ses-card {
+      background: var(--blanco);
+      border: 1px solid var(--v-bdr);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+      transition: transform .18s, box-shadow .18s;
+    }
+
+    .ses-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(61, 107, 40, .13);
+    }
+
+    .ses-card-top {
+      padding: 10px 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ses-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .ses-date-pill {
+      background: rgba(255, 255, 255, .2);
+      border: 1px solid rgba(255, 255, 255, .35);
+      padding: 2px 9px;
+      border-radius: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .ses-card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .ses-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ses-sem-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      background: #e8f5e9;
+      color: var(--v1);
+      border: 1px solid var(--v-bdr);
+      padding: 1px 7px;
+      border-radius: 5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .ses-section-lbl {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--v1);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+
+    .ses-topics {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ses-topics li {
+      font-size: 11.5px;
+      color: var(--texto);
+      line-height: 1.35;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .ses-topics li i {
+      color: var(--v2);
+      font-size: 10px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .ses-entregable {
+      margin-top: auto;
+      background: #f2f7ee;
+      border: 1px solid var(--v-bdr);
+      border-left: 4px solid var(--v2);
+      border-radius: 7px;
+      padding: 10px 12px;
+      font-size: 11.5px;
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+
+    .ses-entregable>i {
+      color: var(--v2);
+      font-size: 14px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .ses-entregable-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ses-entregable-hdr {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--v1);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .ses-entregable-intro {
+      font-size: 11px;
+      color: var(--texto);
+      font-weight: 600;
+    }
+
+    .ses-entregable-list {
+      margin: 0;
+      padding-left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      color: var(--texto);
+      font-size: 11px;
+    }
+
+    .ses-entregable-list li {
+      line-height: 1.38;
+    }
+
+    .ses-entregable-cond {
+      margin-top: 4px;
+      padding: 6px 10px;
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-left: 3px solid #f57f17;
+      border-radius: 5px;
+      font-size: 10.5px;
+      color: #5d4037;
+      line-height: 1.35;
+    }
+
+    .sem-entregable-panel {
+      margin: 0 14px 14px 14px;
+    }
+
+    /* Bloque de Códigos Relacionados dentro de cada tarjeta */
+    .ses-codigos-box {
+      border-top: 1px dashed var(--v-bdr);
+      padding-top: 9px;
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .ses-codigos-box.hidden {
+      display: none;
+    }
+
+    .ses-cod-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .ses-ev-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ses-ev-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 6px;
+      background: #f8fafd;
+      border: 1px solid #dce6f2;
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 10.5px;
+      line-height: 1.3;
+    }
+
+    .ses-ev-item:hover {
+      background: #eef4fb;
+      border-color: var(--v2);
+    }
+
+    .ses-ev-code {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11.5px;
+      color: var(--navy);
+      background: #e8f5e9;
+      border: 1px solid #b8d8b3;
+      padding: 1px 7px;
+      border-radius: 5px;
+      letter-spacing: .5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .ses-ev-code:hover {
+      background: var(--v2);
+      color: #fff;
+      border-color: var(--v2);
+    }
+
+    .ses-ev-desc {
+      color: #4a5a5a;
+      font-size: 10px;
+      flex: 1;
+    }
+
+    .btn-go-crono {
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 9px;
+      font-family: 'Barlow Condensed', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s;
+    }
+
+    .btn-go-crono:hover {
+      background: var(--v2);
+    }
+
+    /* Flujo inferior de etapas */
+    .workflow-bar {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .wf-step {
+      padding: 9px 10px;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    }
+
+    @media(max-width:768px) {
+      .workflow-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-tabs {
+        padding: 0 12px;
+      }
     }
 
     /* ══ FILTROS + TOOLBAR ════════════════════════════ */
@@ -659,19 +1228,82 @@
     }
 
     .ev-c {
-      font-size: 9px;
-      color: #8aab8a;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--navy);
+      background: #e8f5e9;
+      border: 1px solid #b8d8b3;
+      padding: 1px 8px;
+      border-radius: 5px;
       font-family: 'Barlow Condensed', sans-serif;
-      letter-spacing: .4px;
-      margin-top: 2px;
+      letter-spacing: .6px;
+      margin-top: 4px;
     }
 
-    .cod-tag { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:.5px; padding:1px 7px; border-radius:5px; margin-bottom:4px; }
-    .cod-ra { background:#e3f0d4; color:#3d6b28; }
-    .cod-ga { background:var(--navy); color:#fff; }
-    .ev-rel { display:flex; flex-wrap:wrap; gap:3px; margin-top:4px; }
-    .rel-chip { font-family:'Barlow Condensed',sans-serif; font-size:9px; font-weight:600; letter-spacing:.4px; background:#eef3f9; color:var(--navy2); border:1px solid #d5e0ee; border-radius:4px; padding:0 5px; }
-    .rel-comp { background:#f2f7ee; color:var(--v1); border-color:var(--v-bdr); }
+    .ev-c a.ev-link {
+      color: var(--navy) !important;
+      font-weight: 700;
+      border-bottom: none !important;
+      text-decoration: none !important;
+    }
+
+    .ev-c:hover {
+      background: var(--v2);
+      border-color: var(--v2);
+      color: #fff;
+    }
+
+    .ev-c:hover a.ev-link {
+      color: #fff !important;
+    }
+
+    .cod-tag {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      padding: 1px 7px;
+      border-radius: 5px;
+      margin-bottom: 4px;
+    }
+
+    .cod-ra {
+      background: #e3f0d4;
+      color: #3d6b28;
+    }
+
+    .cod-ga {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .ev-rel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-top: 4px;
+    }
+
+    .rel-chip {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .4px;
+      background: #eef3f9;
+      color: var(--navy2);
+      border: 1px solid #d5e0ee;
+      border-radius: 4px;
+      padding: 0 5px;
+    }
+
+    .rel-comp {
+      background: #f2f7ee;
+      color: var(--v1);
+      border-color: var(--v-bdr);
+    }
+
     /* area */
     .ar-b {
       display: inline-flex;
@@ -811,6 +1443,8 @@
 
     @media print {
 
+      .nav-tabs,
+      .ses-controls,
       .toolbar,
       .filters,
       .filter-summary,
@@ -1186,7 +1820,7 @@
         <div class="hdr-tag"><i class="fas fa-building"></i>&nbsp; Centro Latinoamericano de Especies Menores – Regional
           Valle</div>
         <div class="hdr-h1"><i class="fas fa-calendar-alt"></i>&nbsp; Cronograma Híbrido · Ejecución y Evaluación</div>
-        <div class="hdr-prog">Programa de Formación Titulada · Ficha 3186696</div>
+        <div class="hdr-prog">Programa de Formación Titulada · Ficha 3186697</div>
         <div class="hdr-sub">Tecnología en Análisis y Desarrollo de Software</div>
       </div>
       <div class="hdr-badge"><i class="fas fa-sitemap"></i></div>
@@ -1199,53 +1833,124 @@
     </div>
   </header>
 
-  <!-- FILTROS + ACCIONES -->
-  <div class="filters" id="filtersBar">
-    <!-- Semana -->
-    <div class="filter-group">
-      <span class="fl"><i class="fas fa-hashtag"></i> Semana</span>
-      <button class="fb" id="btnEstaSemana" onclick="toggleEstaSemana(this)"><i class="far fa-calendar-alt"></i> Esta
-        Semana</button>
-      <select id="selSem" onchange="onSemChange()"
-        style="padding:2px 6px;border-radius:7px;border:1.5px solid var(--v-bdr);font-size:9.5px;font-family:'Barlow',sans-serif;color:var(--texto);background:var(--v-bg);cursor:pointer;">
-        <option value="">Todas</option>
-      </select>
+  <!-- PESTAÑAS DE NAVEGACIÓN PRINCIPAL -->
+  <nav class="nav-tabs" id="mainNavTabs">
+    <button class="nav-tab active" id="tabBtnCrono" onclick="switchMainTab('crono')">
+      <i class="fas fa-table"></i> Cronograma de Evidencias <span class="tab-badge">7 Semanas</span>
+    </button>
+    <button class="nav-tab" id="tabBtnSesiones" onclick="switchMainTab('sesiones')">
+      <i class="fas fa-chalkboard-teacher"></i> Sesiones y Temas (E-commerce) <span class="tab-badge">14 Sesiones</span>
+    </button>
+  </nav>
+
+  <!-- ══ PESTAÑA 1: CRONOGRAMA DE EVIDENCIAS ══════════════════════════ -->
+  <div id="tabCronograma">
+    <!-- FILTROS + ACCIONES -->
+    <div class="filters" id="filtersBar">
+      <!-- Semana -->
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-hashtag"></i> Semana</span>
+        <button class="fb" id="btnEstaSemana" onclick="toggleEstaSemana(this)"><i class="far fa-calendar-alt"></i> Esta
+          Semana</button>
+        <select id="selSem" onchange="onSemChange()"
+          style="padding:2px 6px;border-radius:7px;border:1.5px solid var(--v-bdr);font-size:9.5px;font-family:'Barlow',sans-serif;color:var(--texto);background:var(--v-bg);cursor:pointer;">
+          <option value="">Todas</option>
+        </select>
+      </div>
+      <!-- Actividad de Proyecto -->
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-tasks"></i> Actividad Proyecto</span>
+        <select id="selAP" onchange="applyFilters()"
+          style="padding:2px 6px;border-radius:7px;border:1.5px solid var(--v-bdr);font-size:9.5px;font-family:'Barlow',sans-serif;color:var(--texto);background:var(--v-bg);cursor:pointer;max-width:160px;">
+          <option value="">Todas</option>
+        </select>
+      </div>
+      <!-- Área -->
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-users"></i> Área</span>
+        <button class="fb navy active" data-af="all" onclick="setAF(this)">Todas</button>
+        <button class="fb navy" data-af="técnico" onclick="setAF(this)"><i class="fas fa-chalkboard-teacher"></i>
+          Técnico</button>
+        <button class="fb navy" data-af="transversal" onclick="setAF(this)"><i class="fas fa-exchange-alt"></i>
+          Transversales</button>
+        <button class="fb navy" data-af="emprendimiento" onclick="setAF(this)"><i class="fas fa-lightbulb"></i>
+          Emprendimiento</button>
+        <button class="fb navy" data-af="derechos fundamentales" onclick="setAF(this)"><i
+            class="fas fa-balance-scale"></i> Derechos Fundamentales</button>
+      </div>
+      <!-- Limpiar + Acciones -->
+      <div class="filter-group" style="border-right:none;margin-left:auto;gap:6px;padding-right:0;padding-left:0;">
+        <button class="btn-clear" onclick="clearAllFilters()"><i class="fas fa-times"></i> Limpiar filtros</button>
+        <button class="btn btn-pdf" onclick="window.print()"
+          style="padding:4px 20px;font-size:9.5px;min-width:110px;justify-content:center;white-space:nowrap;"><i
+            class="fas fa-file-pdf"></i> Descargar PDF</button>
+      </div>
     </div>
-    <!-- Actividad de Proyecto -->
-    <div class="filter-group">
-      <span class="fl"><i class="fas fa-tasks"></i> Actividad Proyecto</span>
-      <select id="selAP" onchange="applyFilters()"
-        style="padding:2px 6px;border-radius:7px;border:1.5px solid var(--v-bdr);font-size:9.5px;font-family:'Barlow',sans-serif;color:var(--texto);background:var(--v-bg);cursor:pointer;max-width:160px;">
-        <option value="">Todas</option>
-      </select>
+
+    <!-- Filter summary -->
+    <div class="filter-summary" id="filterSummary" style="display:none">
+      <div class="filter-tags" id="filterTags"></div>
+      <div class="result-count" id="resultCount"></div>
     </div>
-    <!-- Área -->
-    <div class="filter-group">
-      <span class="fl"><i class="fas fa-users"></i> Área</span>
-      <button class="fb navy active" data-af="all" onclick="setAF(this)">Todas</button>
-      <button class="fb navy" data-af="técnico" onclick="setAF(this)"><i class="fas fa-chalkboard-teacher"></i> Técnico</button>
-      <button class="fb navy" data-af="transversal" onclick="setAF(this)"><i class="fas fa-exchange-alt"></i> Transversales</button>
-      <button class="fb navy" data-af="emprendimiento" onclick="setAF(this)"><i class="fas fa-lightbulb"></i> Emprendimiento</button>
-      <button class="fb navy" data-af="derechos fundamentales" onclick="setAF(this)"><i class="fas fa-balance-scale"></i> Derechos Fundamentales</button>
-    </div>
-    <!-- Limpiar + Acciones -->
-    <div class="filter-group" style="border-right:none;margin-left:auto;gap:6px;padding-right:0;padding-left:0;">
-      <button class="btn-clear" onclick="clearAllFilters()"><i class="fas fa-times"></i> Limpiar filtros</button>
-      <button class="btn btn-pdf" onclick="window.print()"
-        style="padding:4px 20px;font-size:9.5px;min-width:110px;justify-content:center;white-space:nowrap;"><i
-          class="fas fa-file-pdf"></i> Descargar PDF</button>
+
+    <!-- CONTENT -->
+    <div class="content" id="mc">
+      <div class="no-data"><i class="fas fa-database"></i><strong>Cargando cronograma...</strong></div>
     </div>
   </div>
 
-  <!-- Filter summary -->
-  <div class="filter-summary" id="filterSummary" style="display:none">
-    <div class="filter-tags" id="filterTags"></div>
-    <div class="result-count" id="resultCount"></div>
-  </div>
+  <!-- ══ PESTAÑA 2: SESIONES Y TEMAS ══════════════════════════════════ -->
+  <div id="tabSesiones" style="display:none;">
+    <div class="filters" id="sesFiltersBar">
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-layer-group"></i> Vista</span>
+        <button class="fb active" id="btnVistaSes" onclick="setSesView('sesiones')"><i class="fas fa-calendar-day"></i>
+          Sesiones por Semana (1–14)</button>
+        <button class="fb" id="btnVistaSem" onclick="setSesView('semanas')"><i class="fas fa-calendar-week"></i> Resumen
+          por Semanas (1–7)</button>
+      </div>
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-filter"></i> Filtrar Semana</span>
+        <select id="selSesSem" onchange="onSesFilterChange()"
+          style="padding:2px 6px;border-radius:7px;border:1.5px solid var(--v-bdr);font-size:9.5px;font-family:'Barlow',sans-serif;color:var(--texto);background:var(--v-bg);cursor:pointer;">
+          <option value="all">Todas las semanas (S1–S7)</option>
+          <option value="1">Semana 1 (21 – 25 Oct)</option>
+          <option value="2">Semana 2 (26 Oct – 2 Nov)</option>
+          <option value="3">Semana 3 (2 – 9 Nov)</option>
+          <option value="4">Semana 4 (9 – 16 Nov)</option>
+          <option value="5">Semana 5 (16 – 23 Nov)</option>
+          <option value="6">Semana 6 (23 – 30 Nov)</option>
+          <option value="7">Semana 7 (30 Nov – 7 Dic)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-sitemap"></i> Etapa</span>
+        <select id="selSesFase" onchange="onSesFilterChange()"
+          style="padding:2px 6px;border-radius:7px;border:1.5px solid var(--v-bdr);font-size:9.5px;font-family:'Barlow',sans-serif;color:var(--texto);background:var(--v-bg);cursor:pointer;">
+          <option value="all">Todas las etapas</option>
+          <option value="1">Fundamentos y Lógica</option>
+          <option value="2">Bases de Datos y Backend</option>
+          <option value="3">Frontend con React</option>
+          <option value="4">Integración Full-Stack</option>
+          <option value="5">Pruebas, Calidad y Despliegue</option>
+          <option value="6">Documentación y Cierre</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="fl"><i class="fas fa-code-branch"></i> Opción</span>
+        <button class="fb navy" id="btnToggleCodSes" onclick="toggleCodigosSesiones()">
+          <i class="fas fa-eye-slash"></i> Códigos Relacionados: Ocultos
+        </button>
+      </div>
+      <div class="filter-group" style="border-right:none;margin-left:auto;gap:6px;padding-right:0;padding-left:0;">
+        <button class="btn-clear" onclick="clearSesFilters()"><i class="fas fa-times"></i> Restablecer</button>
+        <button class="btn btn-pdf" onclick="window.print()"
+          style="padding:4px 20px;font-size:9.5px;min-width:110px;justify-content:center;white-space:nowrap;"><i
+            class="fas fa-file-pdf"></i> Descargar PDF</button>
+      </div>
+    </div>
 
-  <!-- CONTENT -->
-  <div class="content" id="mc">
-    <div class="no-data"><i class="fas fa-database"></i><strong>Cargando cronograma...</strong></div>
+    <div class="content" id="sesionesContent"></div>
   </div>
 
   <footer>
@@ -1271,22 +1976,18 @@
       COD: 'Código', AREA: 'Área responsable'
     };
 
-    let FASE_START = new Date(2026, 9, 13); // 13/10/2026 — inicio de la fase
+    let FASE_START = new Date(2026, 9, 21); // 21/10/2026 — inicio de la fase
 
     let curArea = 'all', curSem = '', curAP = '';
     let curSemEsta = false;
+    let showRelInTable = true;
     let allData = [];
 
     // ── RECESOS ─────────────────────────────────────────────────────────────────
-    // Receso fin/inicio de año: mar 01/12/26 → mar 02/02/27 (9 semanas sin clase)
-    // S7 termina lunes 30/11/26 · S8 empieza martes 02/02/27
     const RECESOS = [
       { start: new Date(2026, 11, 1), end: new Date(2027, 1, 2) }
     ];
 
-    /**
-     * Retrocede una fecha al MARTES de su semana (ciclo SENA: mar → lun).
-     */
     function floorToTuesday(d) {
       const day = d.getDay();
       const offset = day === 0 ? 5 : day === 1 ? 6 : day - 2;
@@ -1297,27 +1998,37 @@
     }
 
     /**
-     * Número de semana lectiva global de la fase (base 13/10/26, ciclo Mar→Lun).
-     * Descuenta las semanas del receso de fin de año.
+     * 7 Semanas ajustadas según el cronograma del proyecto (21/10/2026 al 07/12/2026)
      */
     const SEMANAS = [
-      { n: 1, a: new Date(2026, 9, 21), b: new Date(2026, 9, 25) },
-      { n: 2, a: new Date(2026, 9, 28), b: new Date(2026, 10, 1) },
-      { n: 3, a: new Date(2026, 10, 4), b: new Date(2026, 10, 8) },
-      { n: 4, a: new Date(2026, 10, 11), b: new Date(2026, 10, 15) },
-      { n: 5, a: new Date(2026, 10, 18), b: new Date(2026, 10, 22) },
-      { n: 6, a: new Date(2026, 10, 25), b: new Date(2026, 11, 7) }
+      { n: 1, a: new Date(2026, 9, 21), b: new Date(2026, 9, 25), label: '21 – 25 de Octubre' },
+      { n: 2, a: new Date(2026, 9, 26), b: new Date(2026, 10, 2), label: '26 de Octubre – 2 de Noviembre' },
+      { n: 3, a: new Date(2026, 10, 2), b: new Date(2026, 10, 9), label: '2 – 9 de Noviembre' },
+      { n: 4, a: new Date(2026, 10, 9), b: new Date(2026, 10, 16), label: '9 – 16 de Noviembre' },
+      { n: 5, a: new Date(2026, 10, 16), b: new Date(2026, 10, 23), label: '16 – 23 de Noviembre' },
+      { n: 6, a: new Date(2026, 10, 23), b: new Date(2026, 10, 30), label: '23 – 30 de Noviembre' },
+      { n: 7, a: new Date(2026, 10, 30), b: new Date(2026, 11, 7), label: '30 de Noviembre – 7 de Diciembre' }
     ];
-    function weekNum(dateStr) {
+
+    function weekNum(dateStr, isEnd = false) {
       const d = parseDate(dateStr); if (!d) return 1;
       const t = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+      if (!isEnd) {
+        for (let i = SEMANAS.length - 1; i >= 0; i--) {
+          if (t.getTime() === SEMANAS[i].a.getTime()) return SEMANAS[i].n;
+        }
+      } else {
+        for (let i = 0; i < SEMANAS.length; i++) {
+          if (t.getTime() === SEMANAS[i].b.getTime()) return SEMANAS[i].n;
+        }
+      }
       for (const s of SEMANAS) { if (t >= s.a && t <= s.b) return s.n; }
       for (const s of SEMANAS) { if (t < s.a) return s.n; }
-      return 0; // fuera del cronograma
+      return SEMANAS[SEMANAS.length - 1].n;
     }
 
     function weekRange(ini, fin) {
-      const a = weekNum(ini), b = weekNum(fin);
+      const a = weekNum(ini, false), b = weekNum(fin, true);
       return a === b ? `Sem. ${a}` : `Sem. ${a}–${b}`;
     }
 
@@ -1449,7 +2160,7 @@
     function passes(r) {
       if (curArea !== 'all' && !(r[C.AREA] || '').toLowerCase().includes(curArea)) return false;
       if (curSem !== '') {
-        const ws = weekNum(r[C.INI]), we = weekNum(r[C.FIN]);
+        const ws = weekNum(r[C.INI], false), we = weekNum(r[C.FIN], true);
         const sw = parseInt(curSem, 10);
         if (sw < ws || sw > we) return false;
       }
@@ -1566,13 +2277,15 @@
     function populateSelects(data) {
       const semSet = new Set();
       data.forEach(r => {
-        const ws = weekNum(r[C.INI]), we = weekNum(r[C.FIN]);
+        const ws = weekNum(r[C.INI], false), we = weekNum(r[C.FIN], true);
         for (let s = ws; s <= we; s++) semSet.add(s);
       });
       const selSem = document.getElementById('selSem');
       selSem.innerHTML = '<option value="">Todas</option>';
       [...semSet].sort((a, b) => a - b).forEach(s => {
-        selSem.innerHTML += `<option value="${s}">Semana ${s}</option>`;
+        const semObj = SEMANAS.find(x => x.n === s);
+        const lbl = semObj ? `Semana ${s} (${semObj.label})` : `Semana ${s}`;
+        selSem.innerHTML += `<option value="${s}">${lbl}</option>`;
       });
 
       const apSet = new Set();
@@ -1586,11 +2299,21 @@
       });
     }
 
+    function toggleRelInTable(btn) {
+      showRelInTable = !showRelInTable;
+      if (showRelInTable) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+      renderData(allData);
+    }
+
     // Códigos relacionados: GA · Competencia · AA · EV
     function relHtml(cod) {
       const m = (cod || '').match(/^(GA\d+)-(\d{9})-(AA\d+)-(EV\d+)$/);
       if (!m) return '';
-      return `<span class="rel-chip">${m[1]}</span><span class="rel-chip rel-comp">Comp. ${m[2]}</span><span class="rel-chip">${m[3]}</span><span class="rel-chip">${m[4]}</span>`;
+      return `<div class="ev-rel"><span class="rel-chip">${m[1]}</span><span class="rel-chip rel-comp">Comp. ${m[2]}</span><span class="rel-chip">${m[3]}</span><span class="rel-chip">${m[4]}</span></div>`;
     }
 
     function togF(i) {
@@ -1617,7 +2340,7 @@
         const raVisCount = {};
         const aaVisRows = {};
 
-        for (const [apName, ras] of Object.entries(aps)) {
+        for (const [apName, ras] of Object.entries(rasMap(aps))) {
           let apTotal = 0;
           for (const [raName, aas] of Object.entries(ras)) {
             const raKey = apName + '|||' + raName;
@@ -1640,7 +2363,7 @@
     <div class="fh" onclick="togF(${fi})">
       <div class="fi2"><i class="fas ${/EVALUACI/i.test(fname) ? 'fa-magnifying-glass' : fIcons[fi % fIcons.length]}"></i></div>
       <div class="ft">${fname}</div>
-      <span class="ficha-badge">FICHA: 3186696</span>
+      <span class="ficha-badge">FICHA: 3186697</span>
       <i class="fas fa-chevron-down ftog"></i>
     </div>
     <div class="tw"><table>
@@ -1681,14 +2404,14 @@
                 for (const r of aaVis) {
                   const tipo = r[C.TIPO] || '';
                   const area = r[C.AREA] || '';
-                  const sw = weekNum(r[C.INI]);
+                  const sw = weekNum(r[C.INI], false);
                   const sr = weekRange(r[C.INI], r[C.FIN]);
                   const cod = r[C.COD] || '';
                   const ev = r[C.EV] || '';
 
                   const link = LINKS[cod] || '';
                   const evHtml = link ? `<a href="${link}" target="_blank" class="ev-link" title="${cod}">${ev}</a>` : ev;
-                  const codHtml = link ? `<a href="${link}" target="_blank" class="ev-link" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--v2);">${cod}</a>` : cod;
+                  const codHtml = link ? `<a href="${link}" target="_blank" class="ev-link" title="Abrir evidencia ${cod} en Zajuna">${cod}</a>` : cod;
 
                   out += `<tr>`;
                   if (apFirst) { out += `<td class="c-ap" rowspan="${apVisC}"><span class="ap-tag">${apLabel}</span><br>${apTitle}</td>`; apFirst = false; }
@@ -1724,6 +2447,8 @@
       mc.innerHTML = out || '<div class="no-data"><i class="fas fa-database"></i><strong>No hay evidencias que coincidan con los filtros.</strong><br><button class="btn btn-o" style="margin-top:12px" onclick="clearAllFilters()"><i class="fas fa-times"></i> Limpiar filtros</button></div>';
       updateFilterSummary(visibleCount, totalCount);
     }
+
+    function rasMap(aps) { return aps; }
 
 
 
@@ -1974,40 +2699,52 @@
 
     // ══ DATOS EMBEBIDOS (HÍBRIDO: FASE 3. EJECUCIÓN + FASE 4. EVALUACIÓN - FICHA 3186696) ════════════════════
     const DATA = [
+      // Semana 1: 21/10/26 – 25/10/26
       { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-01. Planear actividades de construcción del software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA1. Configurar herramientas de versionamiento para control de código.', [C.INI]: '21/10/26', [C.FIN]: '25/10/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'Informe técnico de plan de trabajo para construcción de software.', [C.COD]: 'GA7-220501096-AA1-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
       { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-01. Planear actividades de construcción del software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA1. Configurar herramientas de versionamiento para control de código.', [C.INI]: '21/10/26', [C.FIN]: '25/10/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Definir estándares de codificación, de acuerdo con la plataforma de desarrollo elegida.', [C.COD]: 'GA7-220501096-AA1-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
       { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-01. Planear actividades de construcción del software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA1. Configurar herramientas de versionamiento para control de código.', [C.INI]: '21/10/26', [C.FIN]: '25/10/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'Identifica herramientas de versionamiento.', [C.COD]: 'GA7-220501096-AA1-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
       { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-01. Planear actividades de construcción del software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA1. Configurar herramientas de versionamiento para control de código.', [C.INI]: '21/10/26', [C.FIN]: '25/10/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Instalación y configuración de herramienta de versionamiento (local/web).', [C.COD]: 'GA7-220501096-AA1-EV04', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-01. Planear actividades de construcción del software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA1. Configurar herramientas de versionamiento para control de código.', [C.INI]: '28/10/26', [C.FIN]: '01/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Herramientas de versionamiento (GIT) instalada y configurada.', [C.COD]: 'GA7-220501096-AA1-EV05', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-02. Construir la base de datos para el software a partir del modelo de datos.', [C.AA]: 'GA6-220501096-AA2. Construir la base de datos a partir del modelo de datos.', [C.INI]: '04/11/26', [C.FIN]: '08/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Creación de la estructura de la BD y aplicación de restricciones.', [C.COD]: 'GA6-220501096-AA2-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-02. Construir la base de datos para el software a partir del modelo de datos.', [C.AA]: 'GA6-220501096-AA2. Construir la base de datos a partir del modelo de datos.', [C.INI]: '04/11/26', [C.FIN]: '08/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Script bases de datos del proyecto.', [C.COD]: 'GA6-220501096-AA2-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA2. Aplicar estándares de codificación.', [C.INI]: '28/10/26', [C.FIN]: '01/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Codificación de módulos del software.', [C.COD]: 'GA7-220501096-AA2-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA2. Aplicar estándares de codificación.', [C.INI]: '04/11/26', [C.FIN]: '08/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Módulos de software codificados y probados.', [C.COD]: 'GA7-220501096-AA2-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA3. Codificar los módulos del software Stand-alone, web y móvil.', [C.INI]: '04/11/26', [C.FIN]: '08/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Codificación de módulos del software stand-alone, web y móvil.', [C.COD]: 'GA7-220501096-AA3-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA4. Codificar el front-end utilizando framework.', [C.INI]: '11/11/26', [C.FIN]: '15/11/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'Taller sobre componentes front-end.', [C.COD]: 'GA7-220501096-AA4-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA4. Codificar el front-end utilizando framework.', [C.INI]: '11/11/26', [C.FIN]: '15/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Verificación de procedimientos para la definición de componentes front-end de la aplicación.', [C.COD]: 'GA7-220501096-AA4-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA4. Codificar el front-end utilizando framework.', [C.INI]: '11/11/26', [C.FIN]: '15/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Componente front-end del proyecto formativo y proyectos de clase.', [C.COD]: 'GA7-220501096-AA4-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA5. Crear servicios web.', [C.INI]: '04/11/26', [C.FIN]: '08/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseño y desarrollo de servicios web - caso.', [C.COD]: 'GA7-220501096-AA5-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA5. Crear servicios web.', [C.INI]: '04/11/26', [C.FIN]: '08/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseño y desarrollo de servicios web – proyecto.', [C.COD]: 'GA7-220501096-AA5-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA8-220501096-AA1. Integrar módulos.', [C.INI]: '11/11/26', [C.FIN]: '15/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Desarrollar software a partir de la integración de sus módulos componentes.', [C.COD]: 'GA8-220501096-AA1-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA8-220501096-AA1. Integrar módulos.', [C.INI]: '11/11/26', [C.FIN]: '15/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Módulos integrados.', [C.COD]: 'GA8-220501096-AA1-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-05. Realizar pruebas al software para verificar su funcionalidad.', [C.AA]: 'GA9-220501096-AA1. Realizar plan de pruebas.', [C.INI]: '18/11/26', [C.FIN]: '22/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Realiza plan pruebas de software.', [C.COD]: 'GA9-220501096-AA1-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-05. Realizar pruebas al software para verificar su funcionalidad.', [C.AA]: 'GA9-220501096-AA2. Definir casos y ambiente de prueba.', [C.INI]: '18/11/26', [C.FIN]: '22/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseña casos y define el ambiente de pruebas de software según proyecto.', [C.COD]: 'GA9-220501096-AA2-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-05. Realizar pruebas al software para verificar su funcionalidad.', [C.AA]: 'GA9-220501096-AA3. Documentar y realizar pruebas.', [C.INI]: '18/11/26', [C.FIN]: '22/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Reporte de plan de pruebas ejecutadas.', [C.COD]: 'GA9-220501096-AA3-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-01. Planear actividades de implantación del software de acuerdo con las condiciones de la solución informática.', [C.AA]: 'GA10-220501097-AA3. Elaborar el plan de instalación.', [C.INI]: '18/11/26', [C.FIN]: '22/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Software instalado en la plataforma del cliente.', [C.COD]: 'GA10-220501097-AA3-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-02. Desplegar el software de acuerdo con la arquitectura y las políticas establecidas.', [C.AA]: 'GA10-220501097-AA5. Configurar el software en el servidor y la base de datos.', [C.INI]: '18/11/26', [C.FIN]: '22/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Configuración de servicios, bases de datos y software en el equipo del cliente.', [C.COD]: 'GA10-220501097-AA5-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-02. Desplegar el software de acuerdo con la arquitectura y las políticas establecidas.', [C.AA]: 'GA10-220501097-AA6. Cargar archivos en el sitio de publicación.', [C.INI]: '18/11/26', [C.FIN]: '22/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Archivos cargados en la plataforma de producción.', [C.COD]: 'GA10-220501097-AA6-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-03. Documentar el proceso de implantación de software siguiendo estándares de calidad.', [C.AA]: 'GA10-220501097-AA10. Elaborar manuales de instalación, técnico y de usuario.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Elabora documentos técnicos y de usuario del software.', [C.COD]: 'GA10-220501097-AA10-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-04. Implantar el software de acuerdo con los niveles de servicio establecidos con el cliente.', [C.AA]: 'GA10-220501097-AA11. Elaborar el manual de usuario.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Elabora el manual de usuario, de acuerdo con las funcionalidades del software.', [C.COD]: 'GA10-220501097-AA11-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-04. Implantar el software de acuerdo con los niveles de servicio establecidos con el cliente.', [C.AA]: 'GA10-220501097-AA12. Capacitar a los usuarios y realizar pruebas de aceptación.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Elabora plan de capacitación y realización de pruebas de aceptación del cliente.', [C.COD]: 'GA10-220501097-AA12-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-04. Implantar el software de acuerdo con los niveles de servicio establecidos con el cliente.', [C.AA]: 'GA10-220501097-AA13. Elaborar acta de entrega.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Documentación plan de capacitación y acta de entrega del proyecto de software.', [C.COD]: 'GA10-220501097-AA13-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-01. Integrar elementos de la cultura emprendedora teniendo en cuenta el perfil personal y el contexto de desarrollo social.', [C.AA]: 'GA10-240201529-AA1. Reconocer capacidades personales para convertirse en emprendedor, como parte de su proyecto de vida en términos de desarrollo humano y económico.', [C.INI]: '20/10/26', [C.FIN]: '26/10/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'DOFA personal.', [C.COD]: 'GA10-240201529-AA1-EV01', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-02. Caracterizar la idea de negocio teniendo en cuenta las oportunidades y necesidades del sector productivo y social.', [C.AA]: 'GA10-240201529-AA2. Definir la idea de negocio a desarrollar en el emprendimiento, según las oportunidades de mercado.', [C.INI]: '27/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Pitch idea de negocio.', [C.COD]: 'GA10-240201529-AA2-EV01', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-03. Estructurar el plan de negocio de acuerdo con las características empresariales y tendencias de mercado.', [C.AA]: 'GA10-240201529-AA2. Definir la idea de negocio a desarrollar en el emprendimiento, según las oportunidades de mercado.', [C.INI]: '27/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Modelo Canvas del emprendimiento.', [C.COD]: 'GA10-240201529-AA2-EV02', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
-      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-04. Valorar la propuesta de negocio conforme con su estructura y necesidades del sector productivo y social.', [C.AA]: 'GA10-240201529-AA3. Establecer el modelo de negocio del emprendimiento a partir de las necesidades identificadas.', [C.INI]: '27/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Plan de negocio.', [C.COD]: 'GA10-240201529-AA3-EV01', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
-      { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '220501098-01. Incorporar actividades de aseguramiento de la calidad del software de acuerdo con estándares de la industria.', [C.AA]: 'GA11-220501098-AA1. Aplicar los instrumentos de calidad de software.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseño y diligenciamiento de instrumentos para documentar procesos de calidad del software.', [C.COD]: 'GA11-220501098-AA1-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '220501098-02. Verificar la calidad del software de acuerdo con las prácticas asociadas en los procesos de desarrollo.', [C.AA]: 'GA11-220501098-AA2. Realizar el informe de evaluación de la calidad de software y bitácora de lecciones aprendidas.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Creación de informe con los resultados del comportamiento del software.', [C.COD]: 'GA11-220501098-AA2-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
-      { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '220501098-02. Verificar la calidad del software de acuerdo con las prácticas asociadas en los procesos de desarrollo.', [C.AA]: 'GA11-220501098-AA2. Realizar el informe de evaluación de la calidad de software y bitácora de lecciones aprendidas.', [C.INI]: '25/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Realizar informe de las experiencias aprendidas en el proceso de verificación del software.', [C.COD]: 'GA11-220501098-AA2-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 2: 26/10/26 – 02/11/26
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-01. Planear actividades de construcción del software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA1. Configurar herramientas de versionamiento para control de código.', [C.INI]: '26/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Herramientas de versionamiento (GIT) instalada y configurada.', [C.COD]: 'GA7-220501096-AA1-EV05', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 3: 02/11/26 – 09/11/26
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-02. Construir la base de datos para el software a partir del modelo de datos.', [C.AA]: 'GA6-220501096-AA2. Construir la base de datos a partir del modelo de datos.', [C.INI]: '02/11/26', [C.FIN]: '09/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Creación de la estructura de la BD y aplicación de restricciones.', [C.COD]: 'GA6-220501096-AA2-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-02. Construir la base de datos para el software a partir del modelo de datos.', [C.AA]: 'GA6-220501096-AA2. Construir la base de datos a partir del modelo de datos.', [C.INI]: '02/11/26', [C.FIN]: '09/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Script bases de datos del proyecto.', [C.COD]: 'GA6-220501096-AA2-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 2 y 3 (Estándares y módulos)
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA2. Aplicar estándares de codificación.', [C.INI]: '26/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Codificación de módulos del software.', [C.COD]: 'GA7-220501096-AA2-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA2. Aplicar estándares de codificación.', [C.INI]: '02/11/26', [C.FIN]: '09/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Módulos de software codificados y probados.', [C.COD]: 'GA7-220501096-AA2-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA3. Codificar los módulos del software Stand-alone, web y móvil.', [C.INI]: '02/11/26', [C.FIN]: '09/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Codificación de módulos del software stand-alone, web y móvil.', [C.COD]: 'GA7-220501096-AA3-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 4: 09/11/26 – 16/11/26 (React JS: Componentes y JSX)
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA4. Codificar el front-end utilizando framework.', [C.INI]: '09/11/26', [C.FIN]: '16/11/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'Taller sobre componentes front-end.', [C.COD]: 'GA7-220501096-AA4-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA4. Codificar el front-end utilizando framework.', [C.INI]: '09/11/26', [C.FIN]: '16/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Verificación de procedimientos para la definición de componentes front-end de la aplicación.', [C.COD]: 'GA7-220501096-AA4-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA4. Codificar el front-end utilizando framework.', [C.INI]: '09/11/26', [C.FIN]: '16/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Componente front-end del proyecto formativo y proyectos de clase.', [C.COD]: 'GA7-220501096-AA4-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 3: Servicios web (Spring Boot API REST)
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA5. Crear servicios web.', [C.INI]: '02/11/26', [C.FIN]: '09/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseño y desarrollo de servicios web - caso.', [C.COD]: 'GA7-220501096-AA5-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA7-220501096-AA5. Crear servicios web.', [C.INI]: '02/11/26', [C.FIN]: '09/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseño y desarrollo de servicios web – proyecto.', [C.COD]: 'GA7-220501096-AA5-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 5: 16/11/26 – 23/11/26 (Integración en React y Backend)
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA8-220501096-AA1. Integrar módulos.', [C.INI]: '16/11/26', [C.FIN]: '23/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Desarrollar software a partir de la integración de sus módulos componentes.', [C.COD]: 'GA8-220501096-AA1-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-04. Codificar el software de acuerdo con el diseño establecido.', [C.AA]: 'GA8-220501096-AA1. Integrar módulos.', [C.INI]: '16/11/26', [C.FIN]: '23/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Módulos integrados.', [C.COD]: 'GA8-220501096-AA1-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 6: 23/11/26 – 30/11/26 (Pruebas, Docker y Despliegue)
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-05. Realizar pruebas al software para verificar su funcionalidad.', [C.AA]: 'GA9-220501096-AA1. Realizar plan de pruebas.', [C.INI]: '23/11/26', [C.FIN]: '30/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Realiza plan pruebas de software.', [C.COD]: 'GA9-220501096-AA1-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-05. Realizar pruebas al software para verificar su funcionalidad.', [C.AA]: 'GA9-220501096-AA2. Definir casos y ambiente de prueba.', [C.INI]: '23/11/26', [C.FIN]: '30/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseña casos y define el ambiente de pruebas de software según proyecto.', [C.COD]: 'GA9-220501096-AA2-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP7. Codificar los módulos del software.', [C.RA]: '220501096-05. Realizar pruebas al software para verificar su funcionalidad.', [C.AA]: 'GA9-220501096-AA3. Documentar y realizar pruebas.', [C.INI]: '23/11/26', [C.FIN]: '30/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Reporte de plan de pruebas ejecutadas.', [C.COD]: 'GA9-220501096-AA3-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-01. Planear actividades de implantación del software de acuerdo con las condiciones de la solución informática.', [C.AA]: 'GA10-220501097-AA3. Elaborar el plan de instalación.', [C.INI]: '23/11/26', [C.FIN]: '30/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Software instalado en la plataforma del cliente.', [C.COD]: 'GA10-220501097-AA3-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-02. Desplegar el software de acuerdo con la arquitectura y las políticas establecidas.', [C.AA]: 'GA10-220501097-AA5. Configurar el software en el servidor y la base de datos.', [C.INI]: '23/11/26', [C.FIN]: '30/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Configuración de servicios, bases de datos y software en el equipo del cliente.', [C.COD]: 'GA10-220501097-AA5-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-02. Desplegar el software de acuerdo con la arquitectura y las políticas establecidas.', [C.AA]: 'GA10-220501097-AA6. Cargar archivos en el sitio de publicación.', [C.INI]: '23/11/26', [C.FIN]: '30/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Archivos cargados en la plataforma de producción.', [C.COD]: 'GA10-220501097-AA6-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Semana 7: 30/11/26 – 07/12/26 (Manuales, Calidad y Cierre)
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-03. Documentar el proceso de implantación de software siguiendo estándares de calidad.', [C.AA]: 'GA10-220501097-AA10. Elaborar manuales de instalación, técnico y de usuario.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Elabora documentos técnicos y de usuario del software.', [C.COD]: 'GA10-220501097-AA10-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-04. Implantar el software de acuerdo con los niveles de servicio establecidos con el cliente.', [C.AA]: 'GA10-220501097-AA11. Elaborar el manual de usuario.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Elabora el manual de usuario, de acuerdo con las funcionalidades del software.', [C.COD]: 'GA10-220501097-AA11-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-04. Implantar el software de acuerdo con los niveles de servicio establecidos con el cliente.', [C.AA]: 'GA10-220501097-AA12. Capacitar a los usuarios y realizar pruebas de aceptación.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Elabora plan de capacitación y realización de pruebas de aceptación del cliente.', [C.COD]: 'GA10-220501097-AA12-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '220501097-04. Implantar el software de acuerdo con los niveles de servicio establecidos con el cliente.', [C.AA]: 'GA10-220501097-AA13. Elaborar acta de entrega.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Documentación plan de capacitación y acta de entrega del proyecto de software.', [C.COD]: 'GA10-220501097-AA13-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Transversal - Emprendimiento
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-01. Integrar elementos de la cultura emprendedora teniendo en cuenta el perfil personal y el contexto de desarrollo social.', [C.AA]: 'GA10-240201529-AA1. Reconocer capacidades personales para convertirse en emprendedor, como parte de su proyecto de vida en términos de desarrollo humano y económico.', [C.INI]: '21/10/26', [C.FIN]: '25/10/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'DOFA personal.', [C.COD]: 'GA10-240201529-AA1-EV01', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-02. Caracterizar la idea de negocio teniendo en cuenta las oportunidades y necesidades del sector productivo y social.', [C.AA]: 'GA10-240201529-AA2. Definir la idea de negocio a desarrollar en el emprendimiento, según las oportunidades de mercado.', [C.INI]: '26/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Pitch idea de negocio.', [C.COD]: 'GA10-240201529-AA2-EV01', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-03. Estructurar el plan de negocio de acuerdo con las características empresariales y tendencias de mercado.', [C.AA]: 'GA10-240201529-AA2. Definir la idea de negocio a desarrollar en el emprendimiento, según las oportunidades de mercado.', [C.INI]: '26/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Modelo Canvas del emprendimiento.', [C.COD]: 'GA10-240201529-AA2-EV02', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
+      { [C.FASE]: 'Fase 3. EJECUCIÓN', [C.AP]: 'AP8. Desarrollar las tareas de configuración y puesta en marcha del sistema de información.', [C.RA]: '240201529-04. Valorar la propuesta de negocio conforme con su estructura y necesidades del sector productivo y social.', [C.AA]: 'GA10-240201529-AA3. Establecer el modelo de negocio del emprendimiento a partir de las necesidades identificadas.', [C.INI]: '26/10/26', [C.FIN]: '02/11/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Plan de negocio.', [C.COD]: 'GA10-240201529-AA3-EV01', [C.AREA]: 'Instructor Transversal - Emprendimiento' },
+      // Fase 4. EVALUACIÓN (Semana 7: 30/11/26 – 07/12/26)
+      { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '220501098-01. Incorporar actividades de aseguramiento de la calidad del software de acuerdo con estándares de la industria.', [C.AA]: 'GA11-220501098-AA1. Aplicar los instrumentos de calidad de software.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Diseño y diligenciamiento de instrumentos para documentar procesos de calidad del software.', [C.COD]: 'GA11-220501098-AA1-EV03', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '220501098-02. Verificar la calidad del software de acuerdo con las prácticas asociadas en los procesos de desarrollo.', [C.AA]: 'GA11-220501098-AA2. Realizar el informe de evaluación de la calidad de software y bitácora de lecciones aprendidas.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Creación de informe con los resultados del comportamiento del software.', [C.COD]: 'GA11-220501098-AA2-EV01', [C.AREA]: 'Instructor Vocero - Técnico' },
+      { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '220501098-02. Verificar la calidad del software de acuerdo con las prácticas asociadas en los procesos de desarrollo.', [C.AA]: 'GA11-220501098-AA2. Realizar el informe de evaluación de la calidad de software y bitácora de lecciones aprendidas.', [C.INI]: '30/11/26', [C.FIN]: '07/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Realizar informe de las experiencias aprendidas en el proceso de verificación del software.', [C.COD]: 'GA11-220501098-AA2-EV02', [C.AREA]: 'Instructor Vocero - Técnico' },
+      // Transversal - Derechos Fundamentales
       { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '210201501-01. Reconocer el trabajo como factor de movilidad social y transformación vital con referencia a la fenomenología y a los derechos fundamentales en el trabajo.', [C.AA]: 'GA11-210201501-AA1. Comparar las condiciones del trabajo en el devenir histórico, de acuerdo con los derechos fundamentales.', [C.INI]: '19/11/26', [C.FIN]: '25/11/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'Taller.', [C.COD]: 'GA11-210201501-AA1-EV01', [C.AREA]: 'Instructor Transversal - Derechos Fundamentales' },
       { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '210201501-01. Reconocer el trabajo como factor de movilidad social y transformación vital con referencia a la fenomenología y a los derechos fundamentales en el trabajo.', [C.AA]: 'GA11-210201501-AA1. Comparar las condiciones del trabajo en el devenir histórico, de acuerdo con los derechos fundamentales.', [C.INI]: '20/11/26', [C.FIN]: '25/11/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Foro sobre características del trabajo en contexto local.', [C.COD]: 'GA11-210201501-AA1-EV02', [C.AREA]: 'Instructor Transversal - Derechos Fundamentales' },
       { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '210201501-02. Valorar la importancia de la ciudadanía laboral con base en el estudio de los derechos humanos y fundamentales en el trabajo.', [C.AA]: 'GA11-210201501-AA2. Reconocer los derechos humanos laborales, con base en el estudio de los derechos humanos y fundamentales en el trabajo.', [C.INI]: '19/11/26', [C.FIN]: '25/11/26', [C.TIPO]: 'Evidencia de conocimiento', [C.EV]: 'Informe sobre trabajo decente, ciudadanía laboral, derechos individuales y colectivos en el trabajo.', [C.COD]: 'GA11-210201501-AA2-EV01', [C.AREA]: 'Instructor Transversal - Derechos Fundamentales' },
@@ -2021,6 +2758,810 @@
       { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '210201501-04. Participar en acciones solidarias teniendo en cuenta el ejercicio de los derechos humanos, de los pueblos y de la naturaleza.', [C.AA]: 'GA11-210201501-AA4. Comprender la importancia de las acciones e instituciones encargadas de la protección de los derechos del trabajo, los pueblos y la naturaleza, según el contexto territorial específico.', [C.INI]: '27/11/26', [C.FIN]: '03/12/26', [C.TIPO]: 'Evidencia de producto', [C.EV]: 'Presentación.', [C.COD]: 'GA11-210201501-AA4-EV02', [C.AREA]: 'Instructor Transversal - Derechos Fundamentales' },
       { [C.FASE]: 'Fase 4. EVALUACIÓN', [C.AP]: 'AP9. Realizar actividades de verificación de calidad del software.', [C.RA]: '210201501-04. Participar en acciones solidarias teniendo en cuenta el ejercicio de los derechos humanos, de los pueblos y de la naturaleza.', [C.AA]: 'GA11-210201501-AA4. Comprender la importancia de las acciones e instituciones encargadas de la protección de los derechos del trabajo, los pueblos y la naturaleza, según el contexto territorial específico.', [C.INI]: '01/12/26', [C.FIN]: '03/12/26', [C.TIPO]: 'Evidencia de desempeño', [C.EV]: 'Foro Estado social de derecho.', [C.COD]: 'GA11-210201501-AA4-EV01', [C.AREA]: 'Instructor Transversal - Derechos Fundamentales' },
     ];
+
+    // ══ DATOS DE LA PESTAÑA: SESIONES Y TEMAS POR SEMANA (PROYECTO E-COMMERCE DE CAMISAS) ═════════
+    const ENTREGABLES_POR_SEMANA = {
+      1: {
+        titulo: 'Semana 1. Maquetación de la interfaz web (HTML5 y CSS3)',
+        items: [
+          'Archivo comprimido del proyecto con la estructura de carpetas y archivos correspondientes a la maquetación de la interfaz web utilizando HTML5 y CSS3.',
+          'Inclusión de la carpeta oculta <code>.git</code>, que permita verificar el historial de commits locales realizados durante el desarrollo.',
+          'Aplicación de buenas prácticas en la organización del código y la estructura del proyecto.'
+        ]
+      },
+      2: {
+        titulo: 'Semana 2. Lógica de programación con JavaScript y control de versiones',
+        items: [
+          'Documento con el enlace al repositorio remoto del proyecto en GitHub.',
+          'Enlace al video demostrativo del funcionamiento de la lógica de programación implementada con JavaScript y la manipulación del DOM.',
+          'Historial de commits remotos del proyecto, evidenciando el uso adecuado de Git y GitHub, con mensajes descriptivos y buenas prácticas de versionamiento.'
+        ]
+      },
+      3: {
+        titulo: 'Semana 3. Modelado de datos e integración con Spring Boot',
+        items: [
+          'Documento con el enlace al repositorio remoto del proyecto.',
+          'Diagrama del modelo entidad-relación (MER) de la base de datos.',
+          'Scripts SQL para la creación y configuración de la estructura de la base de datos.',
+          'Evidencias del uso de ramas (branches) para gestionar los cambios relacionados con la base de datos, incluyendo el proceso de merge hacia la rama principal.',
+          'Evidencias mediante capturas de pantalla de la conexión e integración del proyecto con la API REST desarrollada en Spring Boot.'
+        ]
+      },
+      4: {
+        titulo: 'Semana 4. Desarrollo del Frontend con React (Componentes, JSX y consumo inicial de API)',
+        items: [
+          'Documento con el enlace al repositorio remoto del proyecto en GitHub, evidenciando la rama e integración (<code>merge</code>) del proyecto Frontend creado en React JS.',
+          'Enlace al video demostrativo de la interfaz desarrollada con React, mostrando la arquitectura de componentes reutilizables, uso de JSX, paso de propiedades (<code>props</code>), manejo de estado local (<code>useState</code>) y estilos del catálogo de camisas.',
+          'Evidencias de la conexión y consumo inicial de la API REST (<code>GET</code>) mediante <code>fetch</code> o <code>axios</code> (<code>useEffect</code>) para la visualización dinámica del catálogo de productos en el frontend.'
+        ]
+      },
+      5: {
+        titulo: 'Semana 5. Integración Full-Stack con la API REST y funcionalidades CRUD (Avance sobre Semana 4)',
+        items: [
+          'Documento con el enlace actualizado al repositorio remoto del proyecto (Frontend y Backend integrados), reflejando el avance continuo sobre los componentes React entregados en la Semana 4.',
+          'Enlace al video demostrativo del E-commerce funcional Full-Stack, evidenciando la navegación entre vistas (routing), el manejo de estado global y el flujo completo del carrito de compras y gestión de pedidos.',
+          'Evidencias de la integración bidireccional con los servicios de la API REST desarrollada con Spring Boot (configuración de políticas CORS y comunicación HTTP).',
+          'Demostración del funcionamiento de las operaciones CRUD completas (creación, consulta, actualización y eliminación) con persistencia real en MySQL entre el frontend y el backend.'
+        ]
+      },
+      6: {
+        titulo: 'Semana 6. Aseguramiento de la calidad (QA), pruebas y despliegue',
+        items: [
+          'Documento de reporte de aseguramiento de la calidad (QA), que incluya los casos de prueba diseñados y ejecutados, sus resultados y las evidencias correspondientes.',
+          'Evidencias de las pruebas de los servicios de la API REST mediante Postman.',
+          'Informe de cobertura de pruebas, con los resultados obtenidos durante la validación del proyecto.',
+          'Enlace al video demostrativo del proceso de creación y configuración del Dockerfile y del despliegue de la aplicación mediante Docker.',
+          'Enlace al tag de la versión de lanzamiento Release v1 en GitHub, que identifique la versión estable del proyecto.'
+        ]
+      },
+      7: {
+        titulo: 'Semana 7. Documentación técnica, transferencia de conocimiento y sustentación final',
+        intro: 'Entrega de la documentación técnica y funcional del proyecto, acompañada de los siguientes recursos:',
+        items: [
+          '<strong>Manual técnico:</strong> documentación de la arquitectura de tres capas, estructura del proyecto, tecnologías utilizadas, configuración y funcionamiento de los componentes del frontend y backend.',
+          '<strong>Manual de usuario:</strong> guía de uso de la aplicación, con instrucciones claras sobre las funcionalidades y operaciones disponibles para el usuario final.',
+          '<strong>Documento de lecciones aprendidas:</strong> registro de las experiencias, dificultades, soluciones implementadas y aprendizajes obtenidos durante el desarrollo del proyecto.',
+          '<strong>Video de explicación técnica del frontend:</strong> presentación de la estructura, componentes, funcionalidades y lógica implementada en React.',
+          '<strong>Video de explicación técnica del backend:</strong> presentación de la arquitectura, organización del código, servicios, controladores, conexión a la base de datos y funcionamiento de la API REST con Spring Boot.',
+          '<strong>Video de funcionamiento y capacitación al usuario final:</strong> demostración práctica de la aplicación, explicando sus funcionalidades y procedimientos de uso, tomando como referencia el manual de usuario elaborado.'
+        ],
+        condicion: '<strong>Condición de entrega:</strong> los videos de sustentación y capacitación deberán tener una duración máxima de 30 minutos y permitir visualizar claramente el funcionamiento y los aspectos técnicos del proyecto.'
+      }
+    };
+
+    const SEMANAS_BLOQUES = [
+      {
+        id: 'sem1',
+        semanasNums: [1],
+        fasesIds: [1],
+        nombre: 'Semana 1. Maquetación de la interfaz web (HTML5 y CSS3)',
+        rango: '21 – 25 de Octubre',
+        hito: 'Prototipo Frontend',
+        icono: 'fa-code',
+        color: '#1565c0',
+        entregableKey: 1,
+        sesiones: [
+          {
+            num: 1,
+            fecha: '21/10/2026',
+            semana: 1,
+            rangoSem: '21 – 25 de Octubre',
+            titulo: 'Maquetación HTML5/CSS3 y Git básico',
+            icono: 'fa-code',
+            temas: [
+              'Configuración del entorno: VS Code, navegador y Git Bash',
+              'Estructura web con HTML5 semántico (tarjetas de camisas y formulario)',
+              'Estilos con CSS3, modelo de caja, Flexbox y CSS Grid',
+              'Git básico: init, add, commit, status, log'
+            ],
+            evidencias: [
+              'GA7-220501096-AA1-EV01',
+              'GA7-220501096-AA1-EV02',
+              'GA7-220501096-AA1-EV03',
+              'GA7-220501096-AA1-EV04'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sem2',
+        semanasNums: [2],
+        fasesIds: [1],
+        nombre: 'Semana 2. Lógica de programación con JavaScript y control de versiones',
+        rango: '26 de Octubre – 2 de Noviembre',
+        hito: 'Prototipo Frontend',
+        icono: 'fa-terminal',
+        color: '#1976d2',
+        entregableKey: 2,
+        sesiones: [
+          {
+            num: 2,
+            fecha: '26/10/2026',
+            semana: 2,
+            rangoSem: '26 de Octubre – 2 de Noviembre',
+            titulo: 'Lógica y control en JavaScript',
+            icono: 'fa-terminal',
+            temas: [
+              'Variables (let/const), tipos de datos y operadores en JavaScript',
+              'Estructuras condicionales, funciones y arreglos',
+              'Lógica de filtrado de camisas y cálculos básicos',
+              'Git: gestión de repositorio local y control de versiones'
+            ],
+            evidencias: [
+              'GA7-220501096-AA2-EV01'
+            ]
+          },
+          {
+            num: 3,
+            fecha: '29/10/2026',
+            semana: 2,
+            rangoSem: '26 de Octubre – 2 de Noviembre',
+            titulo: 'DOM, eventos y carrito de compras',
+            icono: 'fa-shopping-cart',
+            temas: [
+              'Manipulación del DOM y selectores (querySelector)',
+              'Captura de eventos (click, submit) y filtros dinámicos de camisas',
+              'Construcción del carrito de compras interactivo con JavaScript',
+              'Git: sincronización con repositorio remoto (push y pull)'
+            ],
+            evidencias: [
+              'GA7-220501096-AA1-EV05'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sem3',
+        semanasNums: [3],
+        fasesIds: [2],
+        nombre: 'Semana 3. Modelado de datos e integración con Spring Boot',
+        rango: '2 – 9 de Noviembre',
+        hito: 'Backend con BD',
+        icono: 'fa-database',
+        color: '#2e7d32',
+        entregableKey: 3,
+        sesiones: [
+          {
+            num: 4,
+            fecha: '04/11/2026',
+            semana: 3,
+            rangoSem: '2 – 9 de Noviembre',
+            titulo: 'MySQL, modelo ER y tablas',
+            icono: 'fa-table',
+            temas: [
+              'Modelo entidad-relación (ER): categorías, camisas, usuario, pedido',
+              'Sentencias SQL DDL/DML, claves primarias, foráneas y restricciones',
+              'Creación de tablas y consultas SQL sobre la base de datos del proyecto'
+            ],
+            evidencias: [
+              'GA6-220501096-AA2-EV02',
+              'GA6-220501096-AA2-EV03'
+            ]
+          },
+          {
+            num: 5,
+            fecha: '06/11/2026',
+            semana: 3,
+            rangoSem: '2 – 9 de Noviembre',
+            titulo: 'Spring Boot, API REST y Git intermedio',
+            icono: 'fa-server',
+            temas: [
+              'Configuración de proyecto Spring Boot inicial y conexión MySQL',
+              'Desarrollo de controladores, servicios y endpoints API REST',
+              'Flujo de trabajo con ramas en Git (branch, checkout)'
+            ],
+            evidencias: [
+              'GA7-220501096-AA2-EV02',
+              'GA7-220501096-AA3-EV01',
+              'GA7-220501096-AA5-EV01',
+              'GA7-220501096-AA5-EV03'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sem4',
+        semanasNums: [4],
+        fasesIds: [3],
+        nombre: 'Semana 4. Desarrollo del Frontend con React (Componentes, JSX y consumo inicial de API)',
+        rango: '9 – 16 de Noviembre',
+        hito: 'React conectado',
+        icono: 'fa-atom',
+        color: '#6a1b9a',
+        entregableKey: 4,
+        sesiones: [
+          {
+            num: 6,
+            fecha: '09/11/2026',
+            semana: 4,
+            rangoSem: '9 – 16 de Noviembre',
+            titulo: 'React JS: componentes, JSX y datos',
+            icono: 'fa-cubes',
+            temas: [
+              'Arquitectura de componentes reutilizables en React JS',
+              'Sintaxis JSX, paso de propiedades (Props) y manejo de estado (useState)',
+              'Eventos, hooks básicos y aplicación de estilos en React'
+            ],
+            evidencias: [
+              'GA7-220501096-AA4-EV01',
+              'GA7-220501096-AA4-EV02'
+            ]
+          },
+          {
+            num: 7,
+            fecha: '13/11/2026',
+            semana: 4,
+            rangoSem: '9 – 16 de Noviembre',
+            titulo: 'Consumo de API REST y Git avanzado',
+            icono: 'fa-cloud-download-alt',
+            temas: [
+              'Consumo de servicios API REST mediante Fetch / Axios y useEffect',
+              'Renderizado dinámico del catálogo de camisas en componentes React',
+              'Git avanzado: integración de ramas (merge) y resolución de conflictos'
+            ],
+            evidencias: [
+              'GA7-220501096-AA4-EV03'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sem5',
+        semanasNums: [5],
+        fasesIds: [4],
+        nombre: 'Semana 5. Integración Full-Stack con la API REST y funcionalidades CRUD',
+        rango: '16 – 23 de Noviembre',
+        hito: 'E-commerce funcional',
+        icono: 'fa-puzzle-piece',
+        color: '#00838f',
+        entregableKey: 5,
+        sesiones: [
+          {
+            num: 8,
+            fecha: '18/11/2026',
+            semana: 5,
+            rangoSem: '16 – 23 de Noviembre',
+            titulo: 'Integración React + Spring Boot',
+            icono: 'fa-plug',
+            temas: [
+              'Conexión Full-Stack entre Frontend (React) y Backend (Spring Boot)',
+              'Configuración de políticas CORS y comunicación HTTP',
+              'Routing, navegación entre vistas y estado global de la aplicación'
+            ],
+            evidencias: [
+              'GA8-220501096-AA1-EV01'
+            ]
+          },
+          {
+            num: 9,
+            fecha: '20/11/2026',
+            semana: 5,
+            rangoSem: '16 – 23 de Noviembre',
+            titulo: 'Funcionalidades CRUD',
+            icono: 'fa-sync-alt',
+            temas: [
+              'Implementación de operaciones CRUD completas con persistencia en MySQL',
+              'Catálogo interactivo de camisas, gestión de pedidos y carrito completo',
+              'Pruebas de integración de módulos extremo a extremo'
+            ],
+            evidencias: [
+              'GA8-220501096-AA1-EV02'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sem6',
+        semanasNums: [6],
+        fasesIds: [5],
+        nombre: 'Semana 6. Aseguramiento de la calidad (QA), pruebas y despliegue',
+        rango: '23 – 30 de Noviembre',
+        hito: 'Aplicación probada y desplegada',
+        icono: 'fa-shield-alt',
+        color: '#ef6c00',
+        entregableKey: 6,
+        sesiones: [
+          {
+            num: 10,
+            fecha: '23/11/2026',
+            semana: 6,
+            rangoSem: '23 – 30 de Noviembre',
+            titulo: 'Pruebas funcionales',
+            icono: 'fa-clipboard-check',
+            temas: [
+              'QA y pruebas de servicios API REST con Postman (JSON/HTTP)',
+              'Diseño de casos de prueba, cobertura y definición de ambiente de pruebas',
+              'Ejecución y documentación del reporte de pruebas funcionales'
+            ],
+            evidencias: [
+              'GA9-220501096-AA1-EV02',
+              'GA9-220501096-AA2-EV01',
+              'GA9-220501096-AA3-EV02'
+            ]
+          },
+          {
+            num: 11,
+            fecha: '25/11/2026',
+            semana: 6,
+            rangoSem: '23 – 30 de Noviembre',
+            titulo: 'Compilación, Docker',
+            icono: 'fa-box-open',
+            temas: [
+              'Compilación de producción: npm run build (React) y Spring Boot JAR',
+              'Creación de Dockerfile, Docker Compose y contenedorización de servicios',
+              'Despliegue de la aplicación y generación de Tags de release (v1.0.0) en Git'
+            ],
+            evidencias: [
+              'GA10-220501097-AA3-EV01',
+              'GA10-220501097-AA5-EV01',
+              'GA10-220501097-AA6-EV01'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sem7',
+        semanasNums: [7],
+        fasesIds: [6],
+        nombre: 'Semana 7. Documentación técnica, transferencia de conocimiento y sustentación final',
+        rango: '30 de Noviembre – 7 de Diciembre',
+        hito: 'Proyecto entregado',
+        icono: 'fa-book-open',
+        color: '#2e7d32',
+        entregableKey: 7,
+        sesiones: [
+          {
+            num: 12,
+            fecha: '30/11/2026',
+            semana: 7,
+            rangoSem: '30 de Noviembre – 7 de Diciembre',
+            titulo: 'Manual técnico',
+            icono: 'fa-file-code',
+            temas: [
+              'Documentación de arquitectura del sistema (arquitectura en 3 capas)',
+              'Manual de instalación, configuración de servidores y guía de despliegue'
+            ],
+            evidencias: [
+              'GA10-220501097-AA10-EV01'
+            ]
+          },
+          {
+            num: 13,
+            fecha: '02/12/2026',
+            semana: 7,
+            rangoSem: '30 de Noviembre – 7 de Diciembre',
+            titulo: 'Manual de usuario',
+            icono: 'fa-users',
+            temas: [
+              'Elaboración del manual y guía de usuario según funcionalidades del E-commerce',
+              'Plan de capacitación a usuarios y pruebas de aceptación del cliente'
+            ],
+            evidencias: [
+              'GA10-220501097-AA11-EV01',
+              'GA10-220501097-AA12-EV01'
+            ]
+          },
+          {
+            num: 14,
+            fecha: '07/12/2026',
+            semana: 7,
+            rangoSem: '30 de Noviembre – 7 de Diciembre',
+            titulo: 'Presentación final y cierre',
+            icono: 'fa-trophy',
+            temas: [
+              'Aplicación de lista de chequeo, instrumentos de calidad y auditoría final',
+              'Informe de evaluación de calidad y bitácora de lecciones aprendidas',
+              'Acta de entrega, demostración funcional y sustentación final del proyecto'
+            ],
+            evidencias: [
+              'GA10-220501097-AA13-EV01',
+              'GA11-220501098-AA1-EV03',
+              'GA11-220501098-AA2-EV01',
+              'GA11-220501098-AA2-EV02'
+            ]
+          }
+        ]
+      }
+    ];
+
+    const SEMANAS_DETALLE = [
+      {
+        semana: 1,
+        faseId: 1,
+        fechas: '21 – 25 de Octubre',
+        titulo: 'Semana 1. Maquetación de la interfaz web (HTML5 y CSS3)',
+        color: '#1565c0',
+        temas: [
+          'Entorno VS Code, navegador y Git Bash.',
+          'HTML semántico y estructura.',
+          'Tarjetas de camisas y formulario.',
+          'CSS3, modelo de caja, Flexbox.',
+          'Git: init, add, commit, status, log.'
+        ],
+        modalidad: 'Individual · Sesión 1 (21/10/2026): Maquetación y Git',
+        entregableKey: 1,
+        evidencias: [
+          'GA7-220501096-AA1-EV01',
+          'GA7-220501096-AA1-EV02',
+          'GA7-220501096-AA1-EV03',
+          'GA7-220501096-AA1-EV04'
+        ]
+      },
+      {
+        semana: 2,
+        faseId: 1,
+        fechas: '26 de Octubre – 2 de Noviembre',
+        titulo: 'Semana 2. Lógica de programación con JavaScript y control de versiones',
+        color: '#2e7d32',
+        temas: [
+          'JavaScript: let/const, tipos, condicionales, arreglos.',
+          'DOM y querySelector.',
+          'Eventos click/submit.',
+          'Filtros de camisas.',
+          'Git: add, commit, push/pull.'
+        ],
+        modalidad: 'Individual · Sesión 2 (26/10/2026) y Sesión 3 (29/10/2026): JavaScript, DOM y Git',
+        entregableKey: 2,
+        evidencias: [
+          'GA7-220501096-AA1-EV05',
+          'GA7-220501096-AA2-EV01'
+        ]
+      },
+      {
+        semana: 3,
+        faseId: 2,
+        fechas: '2 – 9 de Noviembre',
+        titulo: 'Semana 3. Modelado de datos e integración con Spring Boot',
+        color: '#ef6c00',
+        temas: [
+          'Modelo ER, categorías, usuario, pedido.',
+          'SQL DDL/DML, claves y foráneas.',
+          'Spring Boot inicial.',
+          'Ramas Git.'
+        ],
+        modalidad: 'Individual · Sesión 4 (04/11/2026) y Sesión 5 (06/11/2026): Base de datos y API REST',
+        entregableKey: 3,
+        evidencias: [
+          'GA6-220501096-AA2-EV02',
+          'GA6-220501096-AA2-EV03',
+          'GA7-220501096-AA2-EV02',
+          'GA7-220501096-AA3-EV01',
+          'GA7-220501096-AA5-EV01',
+          'GA7-220501096-AA5-EV03'
+        ]
+      },
+      {
+        semana: 4,
+        faseId: 3,
+        fechas: '9 – 16 de Noviembre',
+        titulo: 'Semana 4. Desarrollo del Frontend con React (Componentes y JSX)',
+        color: '#6a1b9a',
+        temas: [
+          'Componentes reutilizables.',
+          'JSX, props, estados.',
+          'Eventos y hooks básicos.',
+          'Estilos en React.'
+        ],
+        modalidad: 'Individual · Sesión 6 (09/11/2026) y Sesión 7 (13/11/2026): React: componentes y API',
+        entregableKey: 4,
+        evidencias: [
+          'GA7-220501096-AA4-EV01',
+          'GA7-220501096-AA4-EV02',
+          'GA7-220501096-AA4-EV03'
+        ]
+      },
+      {
+        semana: 5,
+        faseId: 4,
+        fechas: '16 – 23 de Noviembre',
+        titulo: 'Semana 5. Integración Full-Stack con la API REST y funcionalidades CRUD',
+        color: '#00838f',
+        temas: [
+          'Fetch/Axios y API REST.',
+          'Integración con backend.',
+          'Routing y navegación.',
+          'Estado global.'
+        ],
+        modalidad: 'Individual · Sesión 8 (18/11/2026) y Sesión 9 (20/11/2026): Integración Full-Stack y CRUD',
+        entregableKey: 5,
+        evidencias: [
+          'GA8-220501096-AA1-EV01',
+          'GA8-220501096-AA1-EV02'
+        ]
+      },
+      {
+        semana: 6,
+        faseId: 5,
+        fechas: '23 – 30 de Noviembre',
+        titulo: 'Semana 6. Aseguramiento de la calidad (QA), pruebas y despliegue',
+        color: '#2e7d32',
+        temas: [
+          'QA y Postman (JSON/HTTP).',
+          'Casos de prueba y cobertura.',
+          'npm run build.',
+          'Spring Boot JAR.',
+          'Dockerfile y despliegue.',
+          'Tags de release v1.0.0.'
+        ],
+        modalidad: 'Individual · Sesión 10 (23/11/2026) y Sesión 11 (25/11/2026): Pruebas y Docker',
+        entregableKey: 6,
+        evidencias: [
+          'GA9-220501096-AA1-EV02',
+          'GA9-220501096-AA2-EV01',
+          'GA9-220501096-AA3-EV02',
+          'GA10-220501097-AA3-EV01',
+          'GA10-220501097-AA5-EV01',
+          'GA10-220501097-AA6-EV01'
+        ]
+      },
+      {
+        semana: 7,
+        faseId: 6,
+        fechas: '30 de Noviembre – 7 de Diciembre',
+        titulo: 'Semana 7. Documentación técnica, transferencia de conocimiento y sustentación final',
+        color: '#1b5e20',
+        temas: [
+          'Manual técnico (arquitectura, 3 capas).',
+          'Manual de usuario.',
+          'Lista de chequeo.',
+          'Lecciones aprendidas.',
+          'Auditoría del final.'
+        ],
+        modalidad: 'Individual · Sesiones 12 (30/11), 13 (02/12) y 14 (07/12): Cierre y presentación',
+        entregableKey: 7,
+        evidencias: [
+          'GA10-220501097-AA10-EV01',
+          'GA10-220501097-AA11-EV01',
+          'GA10-220501097-AA12-EV01',
+          'GA10-220501097-AA13-EV01',
+          'GA11-220501098-AA1-EV03',
+          'GA11-220501098-AA2-EV01',
+          'GA11-220501098-AA2-EV02'
+        ]
+      }
+    ];
+
+    let curMainTab = 'crono';
+    let sesViewMode = 'sesiones'; // 'sesiones' | 'semanas'
+    let showCodigosSes = false;
+    let sesFilterSem = 'all';
+    let sesFilterFase = 'all';
+
+    function switchMainTab(tab) {
+      curMainTab = tab;
+      document.getElementById('tabBtnCrono').classList.toggle('active', tab === 'crono');
+      document.getElementById('tabBtnSesiones').classList.toggle('active', tab === 'sesiones');
+      document.getElementById('tabCronograma').style.display = tab === 'crono' ? 'block' : 'none';
+      document.getElementById('tabSesiones').style.display = tab === 'sesiones' ? 'block' : 'none';
+      if (tab === 'sesiones') {
+        renderSesionesTab();
+      }
+    }
+
+    function setSesView(mode) {
+      sesViewMode = mode;
+      document.getElementById('btnVistaSes').classList.toggle('active', mode === 'sesiones');
+      document.getElementById('btnVistaSem').classList.toggle('active', mode === 'semanas');
+      renderSesionesTab();
+    }
+
+    function onSesFilterChange() {
+      sesFilterSem = document.getElementById('selSesSem').value;
+      sesFilterFase = document.getElementById('selSesFase').value;
+      renderSesionesTab();
+    }
+
+    function clearSesFilters() {
+      sesFilterSem = 'all';
+      sesFilterFase = 'all';
+      document.getElementById('selSesSem').value = 'all';
+      document.getElementById('selSesFase').value = 'all';
+      renderSesionesTab();
+    }
+
+    function toggleCodigosSesiones() {
+      showCodigosSes = !showCodigosSes;
+      const btn = document.getElementById('btnToggleCodSes');
+      if (btn) {
+        btn.classList.toggle('active', showCodigosSes);
+        btn.innerHTML = showCodigosSes
+          ? '<i class="fas fa-check-circle"></i> Códigos Relacionados: Visibles'
+          : '<i class="fas fa-eye-slash"></i> Códigos Relacionados: Ocultos';
+      }
+      renderSesionesTab();
+    }
+
+    function toggleSingleCardCod(boxId, btnEl) {
+      const box = document.getElementById(boxId);
+      if (!box) return;
+      const isHidden = box.classList.toggle('hidden');
+      if (btnEl) {
+        btnEl.innerHTML = isHidden
+          ? '<i class="fas fa-code"></i> Ver códigos relacionados'
+          : '<i class="fas fa-chevron-up"></i> Ocultar códigos relacionados';
+      }
+    }
+
+    function irACronogramaSemana(semNum) {
+      switchMainTab('crono');
+      curSemEsta = false;
+      const btnEsta = document.getElementById('btnEstaSemana');
+      if (btnEsta) btnEsta.classList.remove('active');
+      const selSem = document.getElementById('selSem');
+      if (selSem) {
+        selSem.value = String(semNum);
+      }
+      curSem = String(semNum);
+      applyFilters();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function findEvInfo(cod) {
+      const row = (allData.length ? allData : DATA).find(r => r[C.COD] === cod);
+      return {
+        cod,
+        ev: row ? row[C.EV] : 'Evidencia de aprendizaje del proyecto',
+        tipo: row ? row[C.TIPO] : '',
+        ini: row ? row[C.INI] : '',
+        fin: row ? row[C.FIN] : '',
+        link: LINKS[cod] || ''
+      };
+    }
+
+    function buildEntregableHtml(entregableKey, extraClass = '') {
+      const ent = ENTREGABLES_POR_SEMANA[entregableKey];
+      if (!ent) return '';
+      const introHtml = ent.intro ? `<div class="ses-entregable-intro">${ent.intro}</div>` : '';
+      const itemsHtml = (ent.items || []).map(item => `<li>${item}</li>`).join('');
+      const condHtml = ent.condicion ? `<div class="ses-entregable-cond"><i class="fas fa-exclamation-circle"></i> ${ent.condicion}</div>` : '';
+      return `
+        <div class="ses-entregable ${extraClass}">
+          <i class="fas fa-box"></i>
+          <div class="ses-entregable-content">
+            <div class="ses-entregable-hdr">Entregable · ${ent.titulo}</div>
+            ${introHtml}
+            <ul class="ses-entregable-list">${itemsHtml}</ul>
+            ${condHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    function buildEvidenciasBoxHtml(boxId, evidencias, semanaNum) {
+      const evItems = (evidencias || []).map(cod => {
+        const info = findEvInfo(cod);
+        const codeEl = info.link
+          ? `<a href="${info.link}" target="_blank" class="ses-ev-code" title="Abrir evidencia ${cod} en Zajuna"><i class="fas fa-external-link-alt" style="font-size:8.5px"></i> ${cod}</a>`
+          : `<span class="ses-ev-code">${cod}</span>`;
+        return `<div class="ses-ev-item">
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:2px;">
+              ${codeEl}
+            </div>
+            <div class="ses-ev-desc">${info.ev}</div>
+          </div>
+        </div>`;
+      }).join('');
+
+      return `
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;padding-top:6px;border-top:1px solid #eef4ea;">
+          <button type="button" class="fb" onclick="toggleSingleCardCod('${boxId}', this)" style="font-size:9.5px;font-weight:600;">
+            ${showCodigosSes ? '<i class="fas fa-chevron-up"></i> Ocultar códigos relacionados' : '<i class="fas fa-code"></i> Ver códigos relacionados'}
+          </button>
+          <button type="button" class="btn-go-crono" onclick="irACronogramaSemana(${semanaNum})" title="Filtrar Semana ${semanaNum} en la tabla del Cronograma">
+            <i class="fas fa-table"></i> Ver Semana ${semanaNum} en Cronograma
+          </button>
+        </div>
+        <div class="ses-codigos-box ${showCodigosSes ? '' : 'hidden'}" id="${boxId}">
+          <div class="ses-section-lbl"><i class="fas fa-check-double"></i> Evidencias Relacionadas (${(evidencias || []).length})</div>
+          <div class="ses-ev-list">${evItems}</div>
+        </div>
+      `;
+    }
+
+    function renderSesionesTab() {
+      const container = document.getElementById('sesionesContent');
+      if (!container) return;
+
+      let html = '';
+
+      if (sesViewMode === 'sesiones') {
+        let totalRendered = 0;
+        SEMANAS_BLOQUES.forEach(bloque => {
+          if (sesFilterFase !== 'all' && !bloque.fasesIds.includes(parseInt(sesFilterFase, 10))) return;
+          const sesFiltradas = bloque.sesiones.filter(s => sesFilterSem === 'all' || String(s.semana) === String(sesFilterSem));
+          if (!sesFiltradas.length) return;
+          totalRendered += sesFiltradas.length;
+
+          html += `
+            <div class="ses-fase-block">
+              <div class="ses-fase-hdr" style="background: linear-gradient(90deg, ${bloque.color} 0%, var(--navy) 100%);">
+                <div class="ses-fase-title">
+                  <i class="fas ${bloque.icono}"></i> ${bloque.nombre}
+                </div>
+                <div class="hito-badge">
+                  <i class="far fa-calendar-alt"></i> ${bloque.rango} &nbsp;·&nbsp; <i class="fas fa-flag-checkered"></i> ${bloque.hito}
+                </div>
+              </div>
+              <div class="ses-cards-grid">
+          `;
+
+          sesFiltradas.forEach(s => {
+            const boxId = `codBox_ses_${s.num}`;
+            const temasHtml = s.temas.map(t => `<li><i class="fas fa-check-circle"></i><span>${t}</span></li>`).join('');
+            html += `
+              <div class="ses-card">
+                <div class="ses-card-top" style="background: ${bloque.color};">
+                  <span class="ses-num"><i class="fas ${s.icono}"></i> Sesión ${s.num}</span>
+                  <span class="ses-date-pill"><i class="far fa-calendar-alt"></i> ${s.fecha}</span>
+                </div>
+                <div class="ses-card-body">
+                  <div class="ses-title">
+                    <span>${s.titulo}</span>
+                    <span class="ses-sem-tag" title="${s.rangoSem}">Semana ${s.semana} (${s.rangoSem})</span>
+                  </div>
+                  <div>
+                    <div class="ses-section-lbl"><i class="fas fa-book-open"></i> Organización de temas a ver</div>
+                    <ul class="ses-topics">${temasHtml}</ul>
+                  </div>
+                  ${buildEvidenciasBoxHtml(boxId, s.evidencias, s.semana)}
+                </div>
+              </div>
+            `;
+          });
+
+          html += `</div>`;
+          html += buildEntregableHtml(bloque.entregableKey, 'sem-entregable-panel');
+          html += `</div>`;
+        });
+
+        if (totalRendered === 0) {
+          html += `<div class="no-data"><i class="fas fa-calendar-times"></i><strong>No hay sesiones que coincidan con el filtro seleccionado.</strong><br><button class="btn btn-o" style="margin-top:12px" onclick="clearSesFilters()"><i class="fas fa-times"></i> Restablecer filtros</button></div>`;
+        }
+      } else {
+        // Vista Resumen por 7 Semanas
+        const semFiltradas = SEMANAS_DETALLE.filter(w => {
+          if (sesFilterSem !== 'all' && String(w.semana) !== String(sesFilterSem)) return false;
+          if (sesFilterFase !== 'all' && String(w.faseId) !== String(sesFilterFase)) return false;
+          return true;
+        });
+
+        if (!semFiltradas.length) {
+          html += `<div class="no-data"><i class="fas fa-calendar-times"></i><strong>No hay semanas que coincidan con el filtro seleccionado.</strong><br><button class="btn btn-o" style="margin-top:12px" onclick="clearSesFilters()"><i class="fas fa-times"></i> Restablecer filtros</button></div>`;
+        } else {
+          html += `<div class="ses-cards-grid" style="padding:0;background:transparent;">`;
+          semFiltradas.forEach(w => {
+            const boxId = `codBox_sem_${w.semana}`;
+            const temasHtml = w.temas.map(t => `<li><i class="fas fa-check-circle"></i><span>${t}</span></li>`).join('');
+            html += `
+              <div class="ses-card">
+                <div class="ses-card-top" style="background: ${w.color};">
+                  <span class="ses-num"><i class="fas fa-calendar-week"></i> Semana ${w.semana}</span>
+                  <span class="ses-date-pill"><i class="far fa-calendar-alt"></i> ${w.fechas}</span>
+                </div>
+                <div class="ses-card-body">
+                  <div class="ses-title">
+                    <span>${w.titulo}</span>
+                  </div>
+                  <div>
+                    <div class="ses-section-lbl"><i class="fas fa-book-open"></i> Temas principales</div>
+                    <ul class="ses-topics">${temasHtml}</ul>
+                  </div>
+                  <div style="font-size:11px;color:#3d5a3e;background:#f7fbf3;padding:6px 9px;border-radius:6px;border:1px solid var(--v-bdr);">
+                    <i class="fas fa-users" style="color:var(--v2)"></i> <strong>Modalidad / Sesiones:</strong> ${w.modalidad}
+                  </div>
+                  ${buildEvidenciasBoxHtml(boxId, w.evidencias, w.semana)}
+                  ${buildEntregableHtml(w.entregableKey)}
+                </div>
+              </div>
+            `;
+          });
+          html += `</div>`;
+        }
+      }
+
+      container.innerHTML = html;
+    }
 
     // ══ UTILIDAD PARA PARSEAR CSV SI SE CONSUME GOOGLE SHEETS PUBLICADO ═══════
     function parseCSVText(text) {
@@ -2059,6 +3600,7 @@
       if (!SHEETS_URL || SHEETS_URL === 'TU_URL_DE_APPS_SCRIPT_AQUI') {
         populateSelects(DATA);
         renderData(DATA);
+        renderSesionesTab();
         if (lov) lov.classList.remove('show');
         return;
       }
